@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
         : fs.readFileSync('./index.html')
     res.end(body)
 })
+const port = process.env.PORT || 3000
+server.listen(port)
 
-server.listen(3000)
-
-console.log('server started')
+console.log(`server started ${port}`)
